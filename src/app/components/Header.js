@@ -1,15 +1,20 @@
 import { Bell, MessageCircle, Menu, Search } from 'lucide-react';
 
-const Header = () => {
+const Header = ({ onMenuClick }) => {
   return (
-    <header className="flex-shrink-0 bg-white h-16 flex items-center justify-between px-8 shadow-sm border-b border-gray-200 sticky top-0 z-20">
+    <header className="bg-white h-16 flex items-center justify-between px-6 shadow-sm border-b border-gray-200 flex-shrink-0 z-10">
       
-      {/* Left Side: Hamburger & Search Placeholder */}
+      {/* Left Side: Hamburger & Search */}
       <div className="flex items-center gap-4">
-        <button className="text-gray-500 hover:text-gray-700 lg:hidden">
+        {/* Hamburger Menu - Visible on Mobile only */}
+        <button 
+          onClick={onMenuClick}
+          className="text-gray-500 hover:text-gray-700 lg:hidden focus:outline-none"
+        >
           <Menu size={24} />
         </button>
-        {/* Search bar simulation from screenshot */}
+
+        {/* Search bar */}
         <div className="hidden md:flex items-center bg-gray-100 rounded-full px-4 py-1.5 border border-gray-200 w-64">
            <Search size={14} className="text-gray-400 mr-2"/>
            <input type="text" placeholder="Search" className="bg-transparent border-none outline-none text-sm text-gray-600 w-full" />
@@ -31,10 +36,9 @@ const Header = () => {
         {/* User Profile */}
         <div className="flex items-center gap-3 border-l border-gray-300 pl-6 ml-2">
           <div className="text-right hidden md:block leading-tight">
-            <p className="text-sm font-semibold text-gray-800">Amaljith U K</p>
+            <p className="text-sm font-semibold text-gray-800">Sruthi Dayanandan</p>
             <p className="text-[11px] text-gray-500">Student</p>
           </div>
-          {/* Avatar */}
           <div className="h-9 w-9 bg-red-50 rounded-full flex items-center justify-center border border-red-100 relative">
              <img 
                src="https://api.dicebear.com/7.x/avataaars/svg?seed=Sruthi" 

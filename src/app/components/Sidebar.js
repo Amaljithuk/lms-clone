@@ -1,11 +1,15 @@
+"use client";
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { 
   LayoutDashboard, BookOpen, MonitorPlay, Calendar, 
   NotebookPen, FileText, FolderGit2, Laptop, 
-  Wallet, MessageSquare, User, LogOut 
+  Wallet, MessageSquare, User, LogOut, X
 } from 'lucide-react';
 
-const Sidebar = () => {
+const Sidebar = ({ onClose }) => {
+  const pathname = usePathname();
+
   const menuItems = [
     { name: 'Dashboard', icon: LayoutDashboard, path: '/' },
     { name: 'Courses', icon: BookOpen, path: '/courses' },
@@ -22,7 +26,16 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="h-full bg-black text-white flex flex-col overflow-y-auto custom-scrollbar">
+    <div className="h-full bg-black text-white flex flex-col overflow-y-auto custom-scrollbar relative">
+      
+      {/* Close Button (Mobile Only) */}
+      <button 
+        onClick={onClose}
+        className="absolute top-4 right-4 text-gray-400 hover:text-white lg:hidden"
+      >
+        <X size={24} />
+      </button>
+
       {/* Logo */}
       <div className="p-6 border-b border-gray-800">
         <h1 className="text-2xl font-bold tracking-wide">
@@ -33,16 +46,24 @@ const Sidebar = () => {
 
       {/* Navigation */}
       <nav className="flex-1 py-6 space-y-1">
-        {menuItems.map((item, index) => (
-          <Link 
-            key={index} 
-            href={item.path}
-            className="flex items-center gap-3 px-6 py-3 text-sm font-medium text-gray-300 hover:bg-gray-800 hover:text-white hover:border-r-4 hover:border-red-500 transition-all"
-          >
-            <item.icon size={18} strokeWidth={1.5} />
-            {item.name}
-          </Link>
-        ))}
+        {menuItems.map((item, index) => {
+          const isActive = pathname === item.path;
+          return (
+            <Link 
+              key={index} 
+              href={item.path}
+              onClick={onClose} // Close sidebar on mobile when link clicked
+              className={`flex items-center gap-3 px-6 py-3 text-sm font-medium transition-all
+                ${isActive 
+                  ? 'bg-gray-800 text-white border-r-4 border-red-500' 
+                  : 'text-gray-300 hover:bg-gray-800 hover:text-white hover:border-r-4 hover:border-red-500'
+                }`}
+            >
+              <item.icon size={18} strokeWidth={1.5} className={isActive ? "text-red-400" : ""} />
+              {item.name}
+            </Link>
+          );
+        })}
       </nav>
 
       {/* Logout */}
