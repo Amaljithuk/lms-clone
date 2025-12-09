@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎓 Techmindz LMS Clone
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.0-38B2AC?style=for-the-badge&logo=tailwind-css)
+![Vercel](https://img.shields.io/badge/Vercel-Deploy-000000?style=for-the-badge&logo=vercel)
 
-First, run the development server:
+A pixel-perfect, fully responsive frontend clone of the Techmindz Learning Management System (LMS) dashboard. This project was built as a technical assessment for the Software Developer Intern position.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**🚀 Live Demo:** [https://lms-clone-gold.vercel.app](https://lms-clone-gold.vercel.app)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📋 Assessment Overview
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The goal was to replicate the UI layout, navigation flow, and key modules from a provided PDF sample. While a backend was not required, I implemented client-side logic to demonstrate interactivity and state management.
 
-## Learn More
+### Key Modules Implemented:
+- **Dashboard:** Statistical overview with cards.
+- **Profile:** Detailed user profile with complex grid layouts.
+- **Courses:** searchable list of active courses.
+- **Payments & Funds:** Tables and forms for financial modules.
+- **Sessions & Timetable:** Date-specific views and data tables.
+- **Feedback (Bonus):** Interactive rating system and history.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ✨ Key Features & Improvements
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Beyond the basic requirements, I added several enhancements to improve User Experience (UX):
 
-## Deploy on Vercel
+1.  **📱 Fully Responsive Layout**
+    - The sidebar automatically collapses on mobile devices.
+    - Implemented a smooth slide-in hamburger menu for smaller screens.
+    - Tables are scrollable on mobile to prevent layout breakage.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2.  **🔍 Functional Search**
+    - The **Courses** page features a real-time search bar that filters the course list instantly (Client-side filtering).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3.  **🎨 Active State Navigation**
+    - The sidebar visually highlights the current active page, improving navigation clarity.
+
+4.  **⭐ Interactive Feedback Page**
+    - I designed and built a custom **Feedback & Support** page (not in original PDF) featuring an interactive star rating component and a submission form.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** [Next.js 14](https://nextjs.org/) (App Router)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Deployment:** Vercel
+
+---
+
+## 📸 Screenshots
+
+| Dashboard (Desktop) | Mobile Sidebar |
+|:---:|:---:|
+| *(Add a screenshot here)* | *(Add a screenshot here)* |
+
+| Profile Page | Feedback Page (Bonus) |
+|:---:|:---:|
+| *(Add a screenshot here)* | *(Add a screenshot here)* |
+
+---
+
+## 🚀 Getting Started Locally
+
+To run this project on your local machine:
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/YOUR_USERNAME/lms-clone.git
+    cd lms-clone
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+
+4.  Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+---
+
+## 📂 Project Structure
