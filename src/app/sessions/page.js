@@ -1,4 +1,4 @@
-import Header from "@/app/components/Header";
+// import Header from "@/app/components/Header";
 import { Search } from 'lucide-react';
 
 export default function Sessions() {
@@ -12,7 +12,7 @@ export default function Sessions() {
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <main className="flex-1 overflow-y-auto p-6 bg-gray-50">
         <div className="mb-6">
            <h2 className="text-2xl font-semibold text-gray-800">Session Recordings</h2>

@@ -1,10 +1,10 @@
-import Header from "@/app/components/Header";
+// import Header from "@/app/components/Header";
 import { CheckCircle, AlertCircle } from 'lucide-react';
 
 export default function Profile() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       
       <main className="flex-1 overflow-y-auto p-6 bg-gray-50">
         

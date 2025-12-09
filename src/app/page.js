@@ -1,4 +1,4 @@
-import Header from "@/app/components/Header";
+// import Header from "@/app/components/Header";
 import { BookOpen, MonitorPlay, Layers, CheckCircle } from 'lucide-react';
 
 export default function Dashboard() {
@@ -12,7 +12,7 @@ export default function Dashboard() {
   return (
     <>
       {/* Header: Fixed at top */}
-      <Header />
+      {/* <Header /> */}
       
       {/* Scrollable Content Area */}
       <main className="flex-1 overflow-y-auto p-8 bg-gray-50">
