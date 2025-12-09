@@ -79,24 +79,7 @@ To run this project on your local machine:
 
 ---
 
-## 📂 Project Structure
-src/
-├── app/ # Next.js App Router pages
-│ ├── assignments/ # Assignments Page
-│ ├── courses/ # Courses Page (w/ Search)
-│ ├── feedbacks/ # Feedback Page (Bonus)
-│ ├── payments/ # Payments Page
-│ ├── profile/ # User Profile Page
-│ ├── layout.js # Global Layout (Sidebar + Header Logic)
-│ └── page.js # Dashboard (Home)
-├── components/
-│ ├── Header.js # Top Navigation Bar
-│ └── Sidebar.js # Main Navigation Sidebar
-└── globals.css # Tailwind directives & Global variables
-code Code
 
-    
----
 
 ## 👤 Author
 
