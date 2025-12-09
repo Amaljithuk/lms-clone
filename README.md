@@ -53,17 +53,7 @@ Beyond the basic requirements, I added several enhancements to improve User Expe
 
 ---
 
-## 📸 Screenshots
 
-| Dashboard (Desktop) | Mobile Sidebar |
-|:---:|:---:|
-| *(Add a screenshot here)* | *(Add a screenshot here)* |
-
-| Profile Page | Feedback Page (Bonus) |
-|:---:|:---:|
-| *(Add a screenshot here)* | *(Add a screenshot here)* |
-
----
 
 ## 🚀 Getting Started Locally
 
@@ -71,7 +61,7 @@ To run this project on your local machine:
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/YOUR_USERNAME/lms-clone.git
+    git clone https://github.com/Amaljithuk/lms-clone.git
     cd lms-clone
     ```
 
@@ -90,3 +80,27 @@ To run this project on your local machine:
 ---
 
 ## 📂 Project Structure
+src/
+├── app/ # Next.js App Router pages
+│ ├── assignments/ # Assignments Page
+│ ├── courses/ # Courses Page (w/ Search)
+│ ├── feedbacks/ # Feedback Page (Bonus)
+│ ├── payments/ # Payments Page
+│ ├── profile/ # User Profile Page
+│ ├── layout.js # Global Layout (Sidebar + Header Logic)
+│ └── page.js # Dashboard (Home)
+├── components/
+│ ├── Header.js # Top Navigation Bar
+│ └── Sidebar.js # Main Navigation Sidebar
+└── globals.css # Tailwind directives & Global variables
+code Code
+
+    
+---
+
+## 👤 Author
+
+**Amaljith U K**
+- MCA Student, CUSAT
+
+  
